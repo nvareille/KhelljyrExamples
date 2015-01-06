@@ -1,0 +1,17 @@
+{
+  "uuid": "75ee6269-9545-4cc4-bdc2-94759ab256e2",
+  "shortName": "garbage_collector_demo",
+  "longName": "garbage_collector_demo",
+  "companyName": "Aldeo labs",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
