@@ -21,6 +21,9 @@ static void	loop()
   clean(t[0]);
   clean(t[1]);
 
+  // We even clean some bad pointers !
+  clean((void *)0x424242);
+
   // At the end of app_init, everything is freed !
   // Hint: "pebble logs" to verify !
 }
