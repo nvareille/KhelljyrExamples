@@ -1,10 +1,21 @@
 #include "Khelljyr/Khelljyr.h"
+#include "Khelljyr/Debug/Debug.h"
+
+static void	f(Layer *l, GContext *ctx)
+{
+  graphics_draw_text(ctx, "Text here.", fonts_get_system_font(FONT_KEY_FONT_FALLBACK),
+		     GRect(0, 0, 144, 160),
+		     GTextOverflowModeWordWrap,
+		     GTextAlignmentLeft,
+		     NULL);
+}
 
 // Basically, a bad code that isn't freed.
 static void	loop()
 {
   void		*t[3];
 
+  window_stack_push(create_window(f), true);
   // Some allocations
   t[0] = alloc(42);
   t[1] = alloc(128);
