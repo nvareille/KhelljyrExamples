@@ -1,5 +1,4 @@
 #include "Khelljyr/Khelljyr.h"
-#include "Khelljyr/Debug/Debug.h"
 
 #define EXPLANATIONS "On this scene, a lot of memory is allocated. With alloc() function, everything will be freed on the actual window destruction.\n" \
   "Now, it is useless to free your allocations ! But if you want to do it, just use clean() function."
