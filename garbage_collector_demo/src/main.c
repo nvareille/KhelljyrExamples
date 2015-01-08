@@ -15,7 +15,7 @@ static void	draw_explanations(Layer *l, GContext *ctx)
   putstr(EXPLANATIONS, 0, 0, ctx);
 }
 
-static void	stack_demonstartion(Layer *l, GContext *ctx)
+static void	stack_demonstration(Layer *l, GContext *ctx)
 {
   putstr(DEMONSTRATION, 0, 0, ctx);
 }
@@ -68,7 +68,7 @@ static void	loop()
   clean((void *)0x424242);
 
   // We push another scene
-  create_basic_scene(stack_demonstartion, NULL, NULL);
+  create_basic_scene(stack_demonstration, NULL, NULL);
 
   // On custom types, you may use custom_alloc with a function pointer to free it (yup that's the secret) ;p
   custom_alloc(sizeof(HardcorePtr), free_hardcore_ptr);
