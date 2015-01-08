@@ -1,0 +1,19 @@
+{
+  "uuid": "205e4add-04c2-42b8-b459-a34a34c4fedd",
+  "shortName": "simple_dragon_watch",
+  "longName": "simple_dragon_watch",
+  "companyName": "Aldeo Labs",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": [
+    	{"type": "png", "name": "DRAGON", "file": "tiny_dragon.png"}
+    ]
+  }
+}
