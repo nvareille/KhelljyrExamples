@@ -45,8 +45,8 @@ static void	process(void *data)
   *img = create_img(RESOURCE_ID_DRAGON);
 
   // We create scenes
-  create_basic_scene(graphic_callback1, NULL, NULL);
-  create_basic_scene(graphic_callback2, NULL, NULL);
+  create_basic_scene(graphic_callback1, NULL, NULL, NULL);
+  create_basic_scene(graphic_callback2, NULL, NULL, NULL);
 }
 
 int		main()

@@ -44,10 +44,10 @@ static void	loop()
   void		*t[3];
 
   // Credits scene, it will be displayed at end
-  create_basic_scene(draw_credits, NULL, NULL);
+  create_basic_scene(draw_credits, NULL, NULL, NULL);
 
   // We create a scene
-  create_basic_scene(draw_explanations, NULL, NULL);
+  create_basic_scene(draw_explanations, NULL, NULL, NULL);
 
   // Some allocations
   t[0] = alloc(42);
@@ -68,7 +68,7 @@ static void	loop()
   clean((void *)0x424242);
 
   // We push another scene
-  create_basic_scene(stack_demonstration, NULL, NULL);
+  create_basic_scene(stack_demonstration, NULL, NULL, NULL);
 
   // On custom types, you may use custom_alloc with a function pointer to free it (yup that's the secret) ;p
   custom_alloc(sizeof(HardcorePtr), free_hardcore_ptr);

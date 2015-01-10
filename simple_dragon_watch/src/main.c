@@ -45,7 +45,7 @@ static void	exec(void *data)
   clock_ptr->img = create_img_pos(RESOURCE_ID_DRAGON, 40, 45);
   
   // We create a scene in fullscreen
-  create_basic_scene_fullscreen(graphic_fct, NULL, unload);
+  create_basic_scene_fullscreen(graphic_fct, NULL, unload, NULL);
 
   // set the time trigger for the time every second
   tick_timer_service_subscribe(SECOND_UNIT, clock_timer);
