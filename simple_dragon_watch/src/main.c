@@ -14,7 +14,7 @@ static void	graphic_fct(Layer *l, GContext *ctx)
   putstr_font(ptr->display, FONT_KEY_GOTHIC_28, 30, 0, ctx);
 
   // We draw the image
-  draw_image(ptr->img, ctx);
+  draw_img(ptr->img, ctx);
 
   // Credits
   putstr("Made with\nKhelljyr Pebble Framework !", 0, 138, ctx);

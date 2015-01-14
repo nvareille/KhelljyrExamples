@@ -6,10 +6,10 @@ static void	graphic_callback1(Layer *l, GContext *ctx)
   Img		**img = USER_PTR;
 
   // We draw the image (initially, it is located on x: 0 y: 0)
-  draw_image(*img, ctx);
+  draw_img(*img, ctx);
 
   // We draw the image at custom localisation
-  draw_image_pos(*img, 80, 50, ctx);
+  draw_img_pos(*img, 80, 50, ctx);
 
   // Some verbose for the watch
   putstr("<= draw_image", 60, 20, ctx);
@@ -25,10 +25,10 @@ static void	graphic_callback2(Layer *l, GContext *ctx)
   Img		**img = USER_PTR;
 
   // We draw the image with effect(initially, it is located on x: 0 y: 0)
-  draw_image_effect(*img, GCompOpAssignInverted, ctx);
+  draw_img_effect(*img, GCompOpAssignInverted, ctx);
 
   // We draw the image  effect at custom localisation
-  draw_image_effect_pos(*img, GCompOpAssignInverted, 80, 90, ctx);
+  draw_img_effect_pos(*img, GCompOpAssignInverted, 80, 90, ctx);
 
   // Some verbose for the watch
   putstr("^= draw_image_effect", 0, 60, ctx);
