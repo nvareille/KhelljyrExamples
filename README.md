@@ -1,5 +1,5 @@
 # KhelljyrExamples
-Samples created with Khelljyr Pebble Framework 0.5
+Samples created with Khelljyr Pebble Framework 0.5 (https://github.com/nvareille/Khelljyr)
 
 To build the projects:
     
