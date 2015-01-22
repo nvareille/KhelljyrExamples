@@ -1,0 +1,17 @@
+{
+  "uuid": "a9b7ca74-da4a-48cc-b2e1-df93dce8e1c8",
+  "shortName": "simple_timer_demo",
+  "longName": "simple_timer_demo",
+  "companyName": "Aldeo labs",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
