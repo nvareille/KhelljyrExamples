@@ -1,0 +1,17 @@
+{
+  "uuid": "65e7b2a7-b6e9-4add-b811-88481887964c",
+  "shortName": "simple_keyboard_demo",
+  "longName": "simple_keyboard_demo",
+  "companyName": "Aldeo Labs",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
