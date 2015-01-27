@@ -18,7 +18,7 @@ static void	callback_keyboard(Keyboard *k)
   create_basic_scene(graphic, NULL, NULL, NULL);
   
   // We take some memory to copy our string
-  str = alloc(10);
+  str = alloc(15);
 
   // We copy our string
   strncpy(str, k->str, k->size);
@@ -30,11 +30,12 @@ static void	callback_keyboard(Keyboard *k)
 static void	exec()
 {
   // We create the Keyboard with "Rawr !" already typed
-  create_basic_keyboard_scene("Rawr !", 10, callback_keyboard);
+  create_basic_keyboard_scene("Rawr", 15, callback_keyboard);
 }
 
 int		main()
 {
+  // We start the application
   app_init(NULL, exec);
 
   return (0);
