@@ -12,8 +12,8 @@ static void	graphic_callback1(Layer *l, GContext *ctx)
   draw_img_pos(*img, 80, 50, ctx);
 
   // Some verbose for the watch
-  putstr("<= draw_image", 60, 20, ctx);
-  putstr("draw_image_pos =>", 0, 50, ctx);
+  putstr("<= draw_image", 60, 23, ctx);
+  putstr("draw_image_pos =>", 0, 53, ctx);
 
   // Credits
   putstr("Made easily with\nKhelljyr Framework by\nNicolas VAREILLE", 0, 105, ctx);
@@ -31,8 +31,8 @@ static void	graphic_callback2(Layer *l, GContext *ctx)
   draw_img_effect_pos(*img, GCompOpAssignInverted, 80, 90, ctx);
 
   // Some verbose for the watch
-  putstr("^= draw_image_effect", 0, 60, ctx);
-  putstr("draw_image_effect_pos =v", 0, 73, ctx);
+  putstr("^= draw_image_effect", 0, 63, ctx);
+  putstr("draw_image_effect_pos =v", 0, 76, ctx);
 
 }
 

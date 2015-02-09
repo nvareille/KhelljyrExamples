@@ -18,7 +18,7 @@ static void	callback_keyboard(Keyboard *k)
   create_basic_scene(graphic, NULL, NULL, NULL);
   
   // We take some memory to copy our string
-  str = alloc(15);
+  str = alloc(k->size + 1);
 
   // We copy our string
   strncpy(str, k->str, k->size);

@@ -38,6 +38,8 @@ static void	free_hardcore_ptr(void *data)
   PRINT("The HardcorePtr is freed !");
 }
 
+void dump_memory_manager();
+
 // Basically, a bad code that isn't freed.
 static void	loop()
 {

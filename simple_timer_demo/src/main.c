@@ -20,7 +20,7 @@ static void	second_scene(Layer *layer, GContext *ctx)
   putstr(disp, 0, 0, ctx);
 }
 
-static void	refresh_second_scene(void *data, Timer *timer)
+static bool	refresh_second_scene(void *data, Timer *timer)
 {
   Data		*ptr = USER_PTR;
 
@@ -30,24 +30,25 @@ static void	refresh_second_scene(void *data, Timer *timer)
   if (ptr->count == 10)
     timer_reschedule(ptr->timer, 10);
   // We refresh the display
-  refresh();  
+  refresh();
+  return (true);
 }
 
-static void	second_scene_creation(void *data, Timer *t)
+static bool	second_scene_creation(void *data, Timer *t)
 {
   Data		*ptr = USER_PTR;
 
-  // We disable the callback, it won't restart
-  t->active = false;
-
   // We destroy the actual window
-  window_stack_pop(true);
+  window_pop();
   
   // We create a new scene
   create_basic_scene(second_scene, NULL, NULL, NULL);
 
   // We create a new Timer.
   ptr->timer = create_timer(1000, refresh_second_scene, NULL);
+  
+  // We return false to say the timer is no longer needed
+  return (false);
 }
 
 static void	first_scene(Layer *l, GContext *ctx)
