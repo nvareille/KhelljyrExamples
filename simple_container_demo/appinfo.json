@@ -1,0 +1,17 @@
+{
+  "uuid": "4f79f678-d116-4583-9f28-23b95eb57783",
+  "shortName": "simple_container_demo",
+  "longName": "simple_container_demo",
+  "companyName": "Aldeo Labs",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}

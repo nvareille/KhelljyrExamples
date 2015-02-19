@@ -2,16 +2,24 @@
 
 typedef struct	s_Clock
 {
-  char		display[10];
+  struct tm	t;
   Img		*img;
 }		Clock;
+
+static void	format(void *data, char *str, size_t size)
+{
+  Clock		*c = data;
+
+  // We set the display variable
+  snprintf(str, size, "%.2d:%.2d:%.2d", c->t.tm_hour, c->t.tm_min, c->t.tm_sec);
+}
 
 static void	graphic_fct(Layer *l, GContext *ctx)
 {
   Clock		*ptr = USER_PTR;
 
   // We display the time with custom font
-  putstr_font(ptr->display, FONT_KEY_GOTHIC_28, 30, 0, ctx);
+  putstr_format_font(10, format, ptr, FONT_KEY_GOTHIC_28, 30, 0, ctx);
 
   // We draw the image
   draw_img(ptr->img, ctx);
@@ -24,8 +32,8 @@ static void	clock_timer(struct tm *time, TimeUnits u)
 {
   Clock		*clock_ptr = USER_PTR;
 
-  // We set the display variable
-  snprintf(clock_ptr->display, sizeof(clock_ptr->display), "%.2d:%.2d:%.2d", time->tm_hour, time->tm_min, time->tm_sec);
+  // We copy the time data to treat it on graphic callback
+  memcpy(&clock_ptr->t, time, sizeof(struct tm));
 
   // The screen has changed, we refresh() it
   refresh();
