@@ -47,6 +47,7 @@ static void	unload(Window *w)
 
 static void	exec(void *data)
 {
+  time_t	t = time(NULL);
   Clock		*clock_ptr = data;
 
   // We create a picture
@@ -57,6 +58,7 @@ static void	exec(void *data)
 
   // set the time trigger for the time every second
   tick_timer_service_subscribe(SECOND_UNIT, clock_timer);
+  clock_timer(localtime(&t), SECOND_UNIT);
 }
 
 int		main()
