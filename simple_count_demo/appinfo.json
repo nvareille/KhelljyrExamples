@@ -1,0 +1,19 @@
+{
+  "uuid": "b4a0f2ec-e370-4e92-86d8-d91424e10238",
+  "shortName": "simple_count_demo",
+  "longName": "simple_count_demo",
+  "companyName": "Aldeo Labs",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
