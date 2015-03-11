@@ -13,7 +13,16 @@
   },
   "resources": {
     "media": [
-	{"type": "png", "name": "DRAGON", "file": "tiny_dragon.png"}
+      {
+        "type": "png",
+        "name": "DRAGON",
+        "file": "tiny_dragon.png"
+      }
     ]
-  }
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ],
+  "sdkVersion": "3"
 }
