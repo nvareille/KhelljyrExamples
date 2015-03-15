@@ -37,6 +37,7 @@ exec[1] = function set_save(e)
 	++count;
     }
     localStorage.setItem(item_name, JSON.stringify(data));
+    var_dump(data);
     Pebble.sendAppMessage(data);
 }
 
@@ -85,6 +86,12 @@ function sendConnect(e)
 
 function appMessageUpdate(e)
 {
+    if (e.payload[0] == null)
+    {
+	e.payload[0] = e.payload["dummy"];
+	delete e.payload["dummy"]
+    }
+    var_dump(e);
     exec[e.payload[0]](e.payload);
 }
 
