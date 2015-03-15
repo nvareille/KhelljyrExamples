@@ -1,0 +1,19 @@
+{
+  "uuid": "1d9ba658-e01a-46c8-aa17-4caf0ee6911e",
+  "shortName": "simple_advanced_message",
+  "longName": "simple_advanced_message",
+  "companyName": "MakeAwesomeHappen",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
