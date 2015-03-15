@@ -19,14 +19,6 @@ static void	load()
   *nbr = 0;
 }
 
-static void	add_10()
-{
-  int		*nbr = USER_PTR;
-
-  *nbr += 10;
-  refresh();
-}
-
 static void	add_1()
 {
   int		*nbr = USER_PTR;
@@ -35,7 +27,7 @@ static void	add_1()
   refresh();
 }
 
-static void	action()
+static void	sub_1()
 {
   int		*nbr = USER_PTR;
 
@@ -43,11 +35,20 @@ static void	action()
   refresh();
 }
 
+static void	action()
+{
+  int		*nbr = USER_PTR;
+
+  *nbr = 0;
+  vibes_long_pulse();
+  refresh();
+}
+
 static void	click()
 {
-  window_single_click_subscribe(BUTTON_ID_UP, add_10);
+  window_single_click_subscribe(BUTTON_ID_UP, add_1);
   window_single_click_subscribe(BUTTON_ID_SELECT, action);
-  window_single_click_subscribe(BUTTON_ID_DOWN, add_1);
+  window_single_click_subscribe(BUTTON_ID_DOWN, sub_1);
 }
 
 static void	exec()
