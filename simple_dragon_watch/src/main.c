@@ -14,6 +14,13 @@ static void	format(void *data, char *str, size_t size)
   snprintf(str, size, "%.2d:%.2d:%.2d", c->t.tm_hour, c->t.tm_min, c->t.tm_sec);
 }
 
+static void	format_date(void *data, char *str, size_t size)
+{
+  Clock		*c = data;
+
+  snprintf(str, size, "%.2d/%.2d %.4d", c->t.tm_mon + 1, c->t.tm_mday, c->t.tm_year + 1900);
+}
+
 static void	graphic_fct(Layer *l, GContext *ctx)
 {
   Clock		*ptr = USER_PTR;
@@ -24,8 +31,10 @@ static void	graphic_fct(Layer *l, GContext *ctx)
   // We draw the image
   draw_img(ptr->img, ctx);
 
+  putstr_format_font(15, format_date, ptr, FONT_KEY_GOTHIC_28, 15, 135, ctx);
+
   // Credits
-  putstr("Made with\nKhelljyr Pebble Framework !", 0, 138, ctx);
+  //putstr("Made with\nKhelljyr Pebble Framework !", 0, 138, ctx);
 }
 
 static void	clock_timer(struct tm *time, TimeUnits u)

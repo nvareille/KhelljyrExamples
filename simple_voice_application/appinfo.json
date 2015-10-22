@@ -1,0 +1,18 @@
+{
+  "uuid": "f6b12215-a58a-4e83-94d9-9fe47b8e4e4a",
+  "shortName": "simple_voice_application",
+  "longName": "simple_voice_application",
+  "companyName": "MakeAwesomeHappen",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt", "chalk"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
